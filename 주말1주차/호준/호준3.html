@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+      
+        .container {
+            border: 1px solid #ccc;
+            width: 1500px;
+            margin: 0; /* 최상단에 배치 */
+            position: relative;
+        }
+        .sidebar {
+            writing-mode: vertical-rl; /* 텍스트 세로쓰기 설정 */
+            text-align: center; /* 텍스트 가운데 정렬 */
+            position: absolute; /* 사이드바를 절대 위치로 설정 */
+            left: 0; 
+            top: 0; 
+            font-size: 18px; 
+            background-color: #f0f0f0; 
+            padding: 10px; 
+            line-height: 1.5; 
+            white-space: nowrap; 
+            justify-content: space-between; /* 글자 사이에 균등 간격 설정 */
+        }
+        .form-content {
+            margin-left: 100px; /* 왼쪽에서부터 간격을 띄움 */
+        }
+        .form-group label {
+            display: inline-block;
+            width: 70px;
+        }
+      .form-group input[type="text"],
+        .form-group input[type="password"] {
+            width: 200px;
+            text-align: center;
+        }
+        .form-group select {
+            width: 220px;
+            padding: 5px;
+        }
+
+        .form-group input[type="radio"] {
+            margin: 0; /* 라디오 버튼의 마진을 제거 */
+            vertical-align: middle; /* 라디오 버튼과 텍스트가 수직으로 맞춰지도록 설정 */
+        }
+        .form-group label {
+            display: inline; /* 레이블을 인라인으로 설정하여 라디오 버튼과 같은 줄에 배치 */
+        }
+        .form-group .checkbox-group {
+           display: block; /* flex를 block으로 변경하여 요소들이 한 줄에 배치되지 않도록 함 */
+          margin-top: 10px; /* 취미 레이블과 체크박스 그룹 사이에 간격 추가 */
+        }
+        .form-group .checkbox-group label {
+            display: inline-block; /* 레이블을 플렉스로 설정 */            
+        }                   
+       
+        .form-group .checkbox-group label {
+            width: auto;
+        }
+        .login-btn {
+            background-color: #00E5FF;
+            color: #000;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="sidebar">안녕하세요</div>
+
+    <div class="form-content">
+        <div class="form-group">
+            <label for="username">아이디:</label>
+            <input type="text" id="username" placeholder="아이디 입력">
+        </div>
+
+        <div class="form-group">
+            <label for="password">비밀번호:</label>
+            <input type="password" id="password" placeholder="비밀번호 입력">
+        </div>
+
+        <div class="form-group">
+            <label>성별:</label>
+            <input type="radio" name="gender" id="male" value="남자">
+            <label for="male">남자</label>
+            <input type="radio" name="gender" id="female" value="여자">
+            <label for="female">여자</label>
+            <input type="radio" name="gender" id="ques" value="비밀">
+            <label for="ques">비밀</label>
+        </div>
+            <label for="hobby">취미:</label>            
+                <label><input type="checkbox" name="hobby" value="무응답" checked> 무응답</label>
+                <label><input type="checkbox" name="hobby" value="독서"> 독서</label>
+                <label><input type="checkbox" name="hobby" value="여행"> 여행</label>
+                <label><input type="checkbox" name="hobby" value="음악 감상"> 음악 감상</label>
+                <label><input type="checkbox" name="hobby" value="운동"> 운동</label>
+                <label><input type="checkbox" name="hobby" value="등산"> 등산</label>
+                <label><input type="checkbox" name="hobby" value="사색"> 사색</label>
+                <label><input type="checkbox" name="hobby" value="영화 감상"> 영화 감상</label>
+            <br>
+        <button class="login-btn">로그인</button>      
+    </div>
+</div>
+
+</body>
+</html>
+

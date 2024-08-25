@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문서</title>
+    <style>
+        h1 {
+            font-size: 30px; 
+            margin-bottom: 20px; /* 제목 하단에 20px의 여백을 추가 */
+        }
+
+        fieldset {
+            width: 400px; 
+            border: 1px solid #000; /* 1px 두께의 검정색 실선 테두리를 추가 */
+            padding: 15px; /* fieldset 내부의 여백을 15px로 설정 */
+            box-sizing: border-box; /* padding과 border를 요소의 전체 너비와 높이에 포함시킴 */
+        }
+
+        legend {
+            font-size: 18px; 
+            font-weight: bold; 
+            padding: 0 5px; /* legend의 좌우에 각각 5px의 여백을 추가 */
+        }
+        .form-group {
+            margin-top: 10px; /* 폼 그룹의 상단에 10px의 여백을 추가 */
+            margin-bottom: 20px; /* 폼 그룹의 하단에 20px의 여백을 추가 */
+        }
+
+        .form-group label {
+            font-weight: bold; 
+        }             
+        .required {
+            color: red;
+            font-size: 12px; 
+            margin-top: 40px; 
+        }
+    </style>
+</head>
+<body>
+    <h1>주문서</h1>
+    <fieldset>
+        <legend>고객 정보</legend>
+        <div class="form-group">
+            <label for="name">* 고객명 :</label>
+            <input type="text" id="name" placeholder="이름을 입력하세요">
+        </div>
+        <div class="form-group">
+            <label for="id">* ID :</label>
+            <input type="text" id="id" placeholder="아이디를 입력하세요">
+        </div>
+        <div class="form-group">
+            <label for="address">* 주소 :</label>
+            <input type="text" id="address" placeholder="주소를 입력하세요">
+            <button type="button">주소 찾기</button>
+        </div>
+        <div class="form-group">
+            <label for="phone">* 연락처 :</label>
+            <select id="phone-code">
+                <option>직접입력</option>
+                <option>010</option>
+                <option>011</option>
+                <option>017</option>
+            </select>
+            <span>-</span>
+            <input type="text" id="phone-middle" style="width: 50px;">
+            <span>-</span>
+            <input type="text" id="phone-last" style="width: 50px;">
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail :</label>
+            <input type="text" id="email" style="width: 100px;">
+            <span>@</span>
+            <select id="email-domain" style="width: 100px;">
+                <option>직접입력</option>
+                <option value="gmail.com">gmail.com</option>
+                <option value="naver.com">naver.com</option>
+                <option value="daum.net">daum.net</option>
+            </select>
+        </div>
+        <div class="required">
+            * 필수 입력 사항
+        </div>
+    </fieldset>
+</body>
+</html>

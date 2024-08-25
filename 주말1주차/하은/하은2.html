@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>구매하기 폼</title> 
+    <style>
+        #design {
+            width: 60px;
+        }
+        label{
+            padding-left: 30px; /* 모든 label 요소의 왼쪽 여백을 30px로 설정하여 내용과 입력 필드 사이에 공간 . */
+        }
+        #delivery {
+            width: 200px; /* delivery 입력창 200px로 */
+        }
+    </style>
+</head>
+<body>
+
+
+    <fieldset> 
+        <legend>구매하기</legend> 
+
+        <label for="option">옵션:</label>
+        <select id="option" name="option"> 
+            <option value="1">1. 샤인 잠옷</option> 
+            <option value="1">2. 이것</option>
+            <option value="1">3. 저것</option> 
+        </select>
+        <br><br> 
+
+        <label for="quantity">수량:</label> <!-- 'quantity' ID를 가진 number input 요소의 레이블을 설정 -->
+        <input type="number" id="quantity" name="quantity" min="100" placeholder="최소100"> <!-- 사용자가 입력할 수 있는 수량을 설정 최소값은 100 -->
+        <br><br> 
+
+        <label for="design">디자인:</label> <!-- 'design' ID를 가진 select 요소의 레이블을 설정 -->
+        <select id="design" name="design"> 
+            <option value="pink">핑크</option> 
+            <option value="black">검정</option> 
+            <option value="blue">파랑</option> 
+        </select>
+    </fieldset>
+
+    <fieldset> 
+        <legend>결제</legend> 
+
+        <label for="name">이름:</label> 
+        <input type="text" id="name" name="name"> <!-- 사용자가 이름을 입력할 수 있는 텍스트 필드를 제공 -->
+        <br><br> 
+
+        <label for="address">주소:</label> <!-- 'address' ID를 가진 text input 요소의 레이블을 설정 -->
+        <input type="text" id="address" name="address">
+        <br><br> 
+
+        <label for="phone">전화번호:</label> <!-- 'phone' ID를 가진 text input 요소의 레이블을 설정 -->
+        <input type="text" id="phone" name="phone" value="010-"> <!-- 사용자가 전화번호를 입력할 수 있는 텍스트 필드를 제공 기본값으로 '010-'이 설정 -->
+        <br><br> 
+
+        <label for="delivery">배송시 요청사항:</label> <!-- 'delivery' ID를 가진 select 요소의 레이블을 설정 -->
+        <select id="delivery" name="delivery"> 
+            <option value="leave_at_door">택배함에 놔주세요.</option> 
+        </select>
+        <br><br> 
+
+        <label for="etc">기타:</label> <!-- 'etc' ID를 가진 textarea 요소의 레이블을 설정 -->
+        <textarea id="etc" name="etc"></textarea> 
+    </fieldset>
+
+    <br>
+    <button type="submit">결제하기</button> 
+
+
+</body>
+</html>

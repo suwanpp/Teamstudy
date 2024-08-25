@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 예제</title>
+    <style>      
+
+        .title {
+            font-size: 48px;
+            font-weight: bold;
+            padding: 20px;
+            text-align: left;
+            color: #000;
+            text-shadow: 2px 2px 8px #FF0000, 4px 4px 10px #FFA500, 6px 6px 15px #FFFF00, 8px 8px 20px #FF4500;
+            margin: 0;
+            position: relative;
+            background: linear-gradient(to right, white, white);
+        }
+
+        .title::after {
+            content: ''; /* after 가상 요소의 내용을 비움*/
+            position: absolute; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255,0,0,0.8), rgba(255,165,0,0.6), rgba(255,255,0,0.4));
+            mix-blend-mode: screen;
+            animation: flickerEffect 2s infinite; /* flickerEffect 2초간격 무한반복 */
+            opacity: 0.7; /* 투명도 0.7 */
+        }
+
+        @keyframes flickerEffect {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+                opacity: 0.99;
+            }
+            20%, 24%, 55% {
+                opacity: 0.4;   
+            }
+        }
+
+        .container {
+            
+            display: grid; /* 그리드 레이아웃을 사용하여 자식 요소 배치 픽셀로했더니 서로 떨어져서 */
+            grid-template-areas:
+                "header header header"  /* 헤더가 상단 전체를 차지*/
+                "nav section aside"    /* 내비게이션, 섹션, 사이드바가 가운데에 배치*/
+                "footer footer footer";
+            grid-template-columns: 0.5fr 2fr 0.5fr;
+            grid-template-rows: auto 1fr auto;
+            height: 40vh;
+            max-width: 800px;
+             /* margin: 0 auto; */
+            padding: 20px;
+        }
+
+        header {
+            grid-area: header; /* 헤더의 그리드 영역 설정 */
+            background-color: pink;
+            color: black;
+            font-size: 24px;
+            font-weight: bold; /* 글꼴 굵게 */
+            height: 60px;
+            text-align: top;
+            text-align: left; 
+            align-self: start; /* 텍스트 줄 높이를 헤더 높이와 같게 설정하여 수직 중앙 정렬 */
+        }
+
+        nav, section, aside {
+            height: 100%;
+            
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: cyan;
+            color: black;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        section {
+            grid-area: section;
+            background-color: peachpuff;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 24px;
+          
+        }
+
+        aside {
+            grid-area: aside;
+            background-color: lightgreen;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: purple;
+            height: 60px;
+            color: black;
+            font-weight: bold;
+            font-size: 24px;
+            text-align: center;
+            align-self: start;
+        }
+
+        .quote {            
+            font-size: 20px;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            
+        }
+
+        .green {
+            background-color: limegreen;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        ul li {
+            color: black;
+            font-weight: bold;
+        }
+
+        ul li::marker {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="title">Hi I'm suwan</div>
+
+    <div class="container">
+        <header>header</header>
+
+        <nav>nav</nav>
+
+        <section>section
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>jQuery</li>
+            </ul>
+            <div class="quote yellow">Life Quotes<br>All you need in this life is ignorance and</div>
+            <div class="quote green">Life Quotes<br>The two most important days in your life are the day you are born and the day you find out why</div>
+        </section>
+
+        <aside>aside</aside>
+
+        <footer>footer</footer>
+    </div>
+
+</body>
+</html>

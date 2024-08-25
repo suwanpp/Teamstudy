@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃</title>
+    <style>
+body {    
+    width: 1000px; 
+    height: 500px; 
+}
+
+.container {
+    width: 80%; 
+    height: 80%; 
+}
+
+.머리말 {
+    background-color: #8ecae6; 
+    height: 15%; 
+    width: 100%; 
+   
+}
+
+.콘텐츠-네비게이션 {
+    display: flex; /* 요소를 flex 컨테이너로 만들어 내부 요소를 가로로 배치 */
+    height: 65%; 
+    width: 100%; 
+}
+
+.콘텐츠 {
+    background-color: #ffccd5; 
+    width: 80%; 
+    display: flex; /* .콘텐츠 요소를 flex 컨테이너로 만들어 내부 요소를 세로로 배치 */
+    flex-direction: column; /* flex 방향을 세로(컬럼)로 설정, 안하면 가로로 정렬됨 */
+    box-sizing: border-box; /* padding과 border를 포함하여 width와 height를 계산 */
+    padding: 10px;
+    align-items: center; /* .콘텐츠 요소 내부의 모든 요소를 가로로 중앙에 배치 */
+    position: relative; /* .콘텐츠 요소를 기준으로 자식 요소의 위치를 상대적으로 설정할 수 있도록 함 */
+}
+
+.콘텐츠 span { 
+    position: absolute; /* span 요소를 .콘텐츠 요소 내에서 절대 위치로 설정 */
+    /* span요소 '콘텐츠'를 맨왼쪽위에 배치하기위해 설정 */
+    top: 0; 
+    left: 0; 
+
+    font-size: 14px; 
+    color: black;
+}
+
+.뉴스, .게임, .쇼핑 {
+    height: 30%; 
+    width: 80%; 
+    margin: 0; 
+    display: flex; /* .뉴스, .게임, .쇼핑 요소 각각을 flex 컨테이너로 만들어 내부 요소를 중앙에 배치 */
+    justify-content: center; /* .뉴스, .게임, .쇼핑 요소 내부의 모든 요소를 가로로 중앙에 배치 */
+}
+
+.뉴스 {
+    background-color: #8ecae6; 
+    margin-top: 2%; 
+}
+
+.게임 {
+    background-color: #ffff00; 
+}
+
+.쇼핑 {
+    background-color: #ffb703; 
+    margin-bottom: 5%; 
+}
+
+.네비게이션 {
+    background-color: #90be6d; 
+    width: 20%; 
+    height: 100%; 
+}
+
+.사이드-기타정보 {
+    display: flex; 
+    height: 10%; 
+    width: 100%; 
+}
+
+.사이드 {
+    background-color: #00f2ea; 
+    width: 50%; 
+}
+
+.기타정보 {
+    background-color: #ffb703;
+    width: 50%;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="머리말">머리말</div>
+        <div class="콘텐츠-네비게이션">
+            <div class="콘텐츠">
+                <span>콘텐츠</span>
+                <div class="뉴스">뉴스</div>
+                <div class="게임">게임</div>
+                <div class="쇼핑">쇼핑</div>
+            </div>
+            <div class="네비게이션">네비게이션</div>
+        </div>
+        <div class="사이드-기타정보">
+            <div class="사이드">사이드</div>
+            <div class="기타정보">기타 정보</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Square</title> 
+     <style>
+        .yellow {
+            background-color: yellow;
+            color: black;
+            font-weight: bold;
+            display: inline-block; /* 인라인 블록으로 설정하여 한 줄에 나열되면서 크기와 여백 조절 가능 */
+            font-size: 20px; 
+        }
+
+       
+        .red-text {
+            color: red;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 100px;
+        }
+
+        .blue-left {
+            color: blue;
+            display: inline-block;
+            margin-left: 0;
+        }
+
+        .blue-right {
+            color: blue;
+            display: inline-block;
+            margin-left: 100px;
+        }
+
+        
+        .green-text {
+            color: green; 
+        }
+
+       
+        .black {
+            background-color: black; 
+            color: yellow; 
+            font-style: italic; 
+        }
+
+        .inline-pair {
+            display: inline-block; /* 인라인 블록으로 설정하여 한 줄에 나열되면서 크기와 여백 조절 가능 */
+            margin-left: 90px; /* 왼쪽에 90px 여백 추가 */
+        }
+    </style>
+</head>
+<body>
+    <h1>Square</h1> <!-- 페이지 제목을 큰 제목으로 표시 -->
+    <p>
+        <!-- 노란 배경에 검정색 글자와 빨간색 글자를 같은 줄에 나열 -->
+        <span class="yellow">All the colors and personalities</span>
+        <span class="red-text">you can't see right</span>
+    </p>
+    <p>
+        <!-- 왼쪽 정렬된 파란색 텍스트와 오른쪽 정렬된 파란색 텍스트를 같은 줄에 나열 -->
+        <span class="blue-left">through what I truly am</span>
+        <span class="blue-right">you're hurting me</span>
+    </p>
+    <p>
+        <!-- 기본 텍스트와 왼쪽에 여백이 있는 인라인 블록 텍스트 쌍을 같은 줄에 나열 -->
+        <span>without noticing</span>
+        <span class="inline-pair">I'm so so broke</span>
+    </p>
+    <p>
+        <!-- 기본 텍스트와 왼쪽에 여백이 있는 인라인 블록 텍스트 쌍을 같은 줄에 나열 -->
+        <span>like someone just robbed me</span>
+        <span class="inline-pair">I'm no invincible</span>
+    </p>
+    <hr><hr>
+    <p class="green-text">I have musch memories.</p>
+    <p class="black">of getting mor weaker</p>
+</body>
+</html>
