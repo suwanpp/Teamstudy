@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #alertButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF; /* 버튼 배경 색상 */
+            color: white; /* 버튼 글자 색상 */
+            border: none;
+            border-radius: 5px;
+        }
+        .radio-buttons {
+            margin-top: 20px;
+        }
+        .radio-buttons label {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 알림 버튼 -->
+    <button id="alertButton">Click for Alert</button>
+
+    <!-- 라디오 버튼 -->
+    <div class="radio-buttons">
+        <label>
+            <input type="radio" name="site" value="https://www.google.com" class="siteRadio">
+            Google
+        </label>
+        <label>
+            <input type="radio" name="site" value="https://www.naver.com" class="siteRadio">
+            Naver
+        </label>
+        <label>
+            <input type="radio" name="site" value="https://www.youtube.com" class="siteRadio">
+            YouTube
+        </label>
+    </div>
+
+    <script>
+        // 버튼 클릭 시 alert 메시지 표시
+        document.getElementById('alertButton').addEventListener('click', () => {
+            alert('버튼이 클릭되었습니다!');
+        });
+
+        // 라디오 버튼 클릭 시 사이트로 이동
+        document.querySelectorAll('.siteRadio').forEach(radio => {
+            radio.addEventListener('change', (event) => {
+                if (event.target.checked) {
+                    window.location.href = event.target.value;
+                }
+            });
+        });
+
+        // 일정 시간이 지나면 알림 표시 (5초 후)
+        setTimeout(() => {
+            alert('5초가 경과했습니다!');
+        }, 5000);
+    </script>
+</body>
+</html>
+
+<!-- 
+1번. 알림버튼 
+ 버튼 클릭 시 alert(버튼이 클릭되었습니다) 실행되도록 만들기.
+
+2번. 라디오버튼
+구글 네이버 유튜브로 설정된 라디오 버튼을 만들고
+버튼 클릭시 해당 사이트로 이동 (location.href 사용)
+
+3번. setTimeout 사용
+페이지 로드된 후 5초 지나면 alert로 알림표시 -->
