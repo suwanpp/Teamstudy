@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경색 변경</title>
+    <style>
+        .color-box {  /* 박스 스타일 */
+            width: 200px;
+            height: 200px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;           
+        }
+
+        .change-color-button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="color-box" id="colorBox"></div> 
+
+    <button class="change-color-button" onclick="changeColor()">색상 변경</button>
+
+    <script>
+        function changeColor() {
+            // colorbox Id가진 idv 배경색 red로 변경
+            document.getElementById('colorBox').style.backgroundColor = 'red';
+        }
+    </script>
+</body>
+</html>

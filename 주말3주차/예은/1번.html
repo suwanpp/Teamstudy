@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이지 이동</title>
+</head>
+<body>
+    <!-- 클릭 시 2.html로 이동하는 버튼 -->
+    <button id="btn">2번.html로 이동</button>
+
+    <script>
+        // 페이지 이동 함수
+        function navigateToPage() {
+            // '2.html'로 이동
+            window.location.href = '2번.html';
+        }
+
+        // 버튼 클릭 이벤트 리스너 추가
+        document.getElementById('btn').addEventListener('click', navigateToPage);
+    </script>
+</body>
+</html>

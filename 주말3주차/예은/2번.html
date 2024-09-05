@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이지 이동</title>
+</head>
+<body>
+    <!-- 뒤로 가기가 불가한 새 페이지로 이동할 버튼 -->
+    <button id="btn">새 페이지로 이동</button>
+
+    <script>
+        // 버튼 클릭 시 페이지 이동 함수
+        function navigateToNewPage() {
+            
+            window.location.replace('https://www.google.com');  // window.location.replace 사용하면 뒤로가기 불가
+        }
+
+        // 버튼 클릭 이벤트 리스너 추가
+        document.getElementById('btn').addEventListener('click', navigateToNewPage);
+    </script>
+</body>
+</html>
